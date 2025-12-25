@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modares GPT
 
-## Getting Started
+پلتفرم جامع خدمات هوش مصنوعی برای معلمان و دانشجویان
 
-First, run the development server:
+## ویژگی‌ها
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🔐 احراز هویت با Next Auth
+- 💳 سیستم اشتراک (ماهانه، سه‌ماهه، سالانه)
+- 🤖 خدمات هوش مصنوعی:
+  - تصویر ساز
+  - ساخت طرح درس
+  - چت هوش مصنوعی
+  - پاورپوینت ساز
+  - فلش کارت ساز
+  - تبدیل گفتار به متن
+- 📚 کتابخانه پرامپت
+- 👨‍💼 پنل مدیریت
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## تکنولوژی‌ها
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 14
+- TypeScript
+- Prisma
+- PostgreSQL (Neon)
+- Next Auth
+- shadcn/ui
+- Zustand
+- OpenAI API
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## نصب و راه‌اندازی
 
-## Learn More
+برای راهنمای کامل نصب، فایل [SETUP.md](./SETUP.md) را مطالعه کنید.
 
-To learn more about Next.js, take a look at the following resources:
+خلاصه مراحل:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. نصب dependencies: `npm install`
+2. تنظیم متغیرهای محیطی در فایل `.env`
+3. راه‌اندازی دیتابیس: `npx prisma migrate dev`
+4. Seed کردن داده‌های اولیه (اختیاری): `npx tsx lib/seed.ts`
+5. اجرای پروژه: `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ساختار پروژه
 
-## Deploy on Vercel
+- `app/` - صفحات و routes
+- `components/` - کامپوننت‌های React
+- `lib/` - توابع کمکی و utilities
+- `prisma/` - Schema و migrations
+- `types/` - TypeScript types
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## استفاده
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. ثبت نام یا ورود به حساب کاربری
+2. خرید اشتراک (در پنل ادمین قابل فعال‌سازی است)
+3. استفاده از خدمات هوش مصنوعی
+4. مشاهده و مدیریت در کتابخانه پرامپت
+
+## پنل ادمین
+
+برای دسترسی به پنل ادمین، کاربر باید نقش ADMIN داشته باشد. در پنل ادمین می‌توانید:
+- کاربران را مدیریت کنید
+- اشتراک کاربران را فعال کنید
+- خدمات را فعال/غیرفعال کنید
+- پرامپت‌های جدید به کتابخانه اضافه کنید
